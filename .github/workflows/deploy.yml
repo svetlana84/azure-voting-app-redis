@@ -38,7 +38,7 @@ env:
   RESOURCE_GROUP: qpetraroia_RG
   CLUSTER_NAME: myAKSCluster
   DEPLOYMENT_MANIFEST_PATH: azure-vote-all-in-one-redis.yaml
-  IMAGE_PULL_SECRET_NAME: "ACR_Credentials"
+  IMAGE_PULL_SECRET_NAME: "AcrCredentials"
 
 
 

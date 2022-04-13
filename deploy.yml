@@ -33,7 +33,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: demoregistrybuild2022.azurecr.io
+  AZURE_CONTAINER_REGISTRY: demoregistrybuild2022
   CONTAINER_NAME: azure-vote-demo
   RESOURCE_GROUP: qpetraroia_RG
   CLUSTER_NAME: myAKSCluster

@@ -2,8 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: docker-hello-world
+  labels:
+    app: docker-hello-world
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: docker-hello-world
@@ -12,8 +14,8 @@ spec:
       labels:
         app: docker-hello-world
     spec:
-      nodeSelector:
-        "beta.kubernetes.io/os": linux
       containers:
       - name: docker-hello-world
         image: hello-world:latest
+        ports:
+        - containerPort: 80

@@ -34,7 +34,7 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: demoregistrybuild2022
-  CONTAINER_NAME: azure-vote-demo
+  CONTAINER_NAME: hello-world
   RESOURCE_GROUP: qpetraroia_RG
   CLUSTER_NAME: myAKSCluster
   DEPLOYMENT_MANIFEST_PATH: docker-manifest.yaml

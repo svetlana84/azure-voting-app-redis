@@ -21,7 +21,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: demoregistrybuild2022.azurecr.io/samples/nginx
+      - image: demoregistrybuild2022.azurecr.io/nginx:latest
         imagePullPolicy: Always
         name: nginx
         ports:

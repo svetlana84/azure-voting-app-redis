@@ -37,7 +37,7 @@ env:
   CONTAINER_NAME: hello-world
   RESOURCE_GROUP: qpetraroia_RG
   CLUSTER_NAME: myAKSCluster
-  DEPLOYMENT_MANIFEST_PATH: docker-manifest.yaml
+  DEPLOYMENT_MANIFEST_PATH: nginx-acr-manifest.yaml
   IMAGE_PULL_SECRET_NAME: "acrcredentials"
 
 

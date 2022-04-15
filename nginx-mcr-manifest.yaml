@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hello-world
-  name: hello-world
+    app: nginx
+  name: nginx
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: nginx
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: hello-world
+        app: nginx
     spec:
       containers:
-      - image: rancher/hello-world
+      - image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
         imagePullPolicy: Always
-        name: hello-world
+        name: nginx
         ports:
         - containerPort: 80
           protocol: TCP
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: nginx
   namespace: default
 spec:
   ports:
@@ -40,4 +40,6 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: hello-world
+    app: nginx
+
+    

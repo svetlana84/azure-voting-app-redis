@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubclus1-b14d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubclus1-b14d"
+  template:
+    metadata:
+      labels:
+        app: "kubclus1-b14d"
+    spec:
+      containers:
+        - name: "kubclus1-b14d"
+          image: "registry323.azurecr.io/kubclus1"
+          ports:
+          - containerPort: 80
